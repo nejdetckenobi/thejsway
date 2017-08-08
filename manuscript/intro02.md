@@ -18,7 +18,7 @@ Since their invention in the 1950s, **computers** have revolutionized our daily 
 
 I> Let's take the term "computer" in its broadest sense, meaning a machine that can perform arithmetic and logical operations. It could mean either a desktop or laptop computer (PC, Mac), a computing server, or a mobile device like a tablet or smartphone.
 
-Nonetheless, a computer can only perform a series of simple operations when instructed to do so. They normally have no ability to learn, judge, or improvise. They simple do what they're told to do! Their value comes from how they can quickly handle and process huge amounts of information.
+Nonetheless, a computer can only perform a series of simple operations when instructed to do so. They normally have no ability to learn, judge, or improvise. They simply do what they're told to do! Their value comes from how they can quickly handle and process huge amounts of information.
 
 A computer often requires human intervention. That's where programmers and developers come in! They write programs that result in instructions to a computer.
 
@@ -30,7 +30,7 @@ A **programming language** is a way to give orders to a computer. It's a bit lik
 
 ### Closest to the hardware: assembly language
 
-The only programming language directly understandable by a computer is machine language, also known as **assembly language**. It is a set of very primitive operations linked to a specific family of processors (the computer's "brain") and manipulating its memory.
+The only programming language directly understandable by a computer is machine language. A more human-readable representation of machine language is **assembly language**. It is a set of very primitive operations linked to a specific family of processors (the computer's "brain") and manipulating its memory.
 
 Here's an example of a basic program written in assembly language. It displays `"Hello"` to the user.
 
@@ -50,7 +50,7 @@ movl $0, %ebx
 int $0x80
 ```
 
-Pretty scary, isn't it? Fortunately, other programming languages are much more simpler and convenient to use than assembly language.
+Pretty scary, isn't it? Fortunately, other programming languages are much simpler and convenient to use than assembly language.
 
 ### The family of programming languages
 
@@ -96,7 +96,7 @@ The fact of asking a computer to process the orders contained in a program is ca
 
 With some languages, the translation into assembly code happens line by line in real time. In this case, the program is executed like a human reads a book, starting at the top and working down line-by-line. These languages are said to be **interpreted**. Python and PHP are examples of interpreted languages.
 
-Another possibility is to read and check for errors the whole source code before execution. If no errors are detected, an executable targeting one specific hardware platform is generated. The intermediate step is called **compilation**, and the programming language which use it are said to be **compiled**.
+Another possibility is to read and check for errors throughout the whole source code before execution. If no errors are detected, an executable targeting one specific hardware platform is generated. The intermediate step is called **compilation**, and the programming languages which use it are said to be **compiled**.
 
 Lastly, some languages are pseudo-compiled in order to be executed on different hardware platforms. This is the case for the Java language and also for those of the Microsoft .NET family (VB.NET, C#, etc).
 
@@ -142,6 +142,6 @@ We used a simple writing style, not a specific programming language. In fact, we
 
 ### The role of the programmer
 
-Writing programs that can reliable perform expected tasks is a programmer's goal. A beginner can learn to quickly create simple programs. Things get more complicated when the program evolves and becomes more complex. It takes experience and a lot of practice before you feel like you'll control this complexity! Once you have the foundation, the only limit is your imagination!
+Writing programs that can reliably perform expected tasks is a programmer's goal. A beginner can learn to quickly create simple programs. Things get more complicated when the program evolves and becomes more complex. It takes experience and a lot of practice before you feel like you'll control this complexity! Once you have the foundation, the only limit is your imagination!
 
-> "The computer programmer is a creator of universes for which he alone is the lawgiver. No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or field of battle and to command such unswervingly dutiful actors or troops.” (Joseph Weizenbaum)
+> "The computer programmer is a creator of universes for which he alone is the lawgiver. No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or field of battle and to command such unswervingly dutiful actors or troops." (Joseph Weizenbaum)

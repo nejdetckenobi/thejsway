@@ -6,7 +6,7 @@ In this chapter, you'll see how to use JavaScript to traverse the DOM.
 
 * Rather than go through the DOM node by node, you can quickly access one or more elements using **selection methods**.
 
-* The `getElementsByTagName()`, `getElementsByClassName()` and `getElementById()` methods respectively search items by **tag name**, **class**, and **ID**. The first two methods return a list, which can further be converted to an array with `Array.from()`. The latter method returns a single item. 
+* The `getElementsByTagName()`, `getElementsByClassName()` and `getElementById()` methods respectively search items by **tag name**, **class**, and **ID**. The first two methods return a list, which can further be converted to an array with `Array.from()`. The latter method returns a single item.
 
 * The `querySelectorAll()` and `querySelector()` methods make it possible to search for items using a **CSS selector**. The first method returns all matching items, and the second returns only the first.
 
@@ -89,9 +89,9 @@ T> Suffixing JavaScript variables associated to DOM element nodes with `Element`
 
 ### Selecting items according to class
 
-DOM elements also feature a method called `getElementsByClassName()`. It returns a `NodeList` object of elements with the class name as a parameter. Again, the search covers all sub-elements of the node on which the method is called.
+DOM elements also feature a method called `getElementsByClassName()`. This method returns a `NodeList` object of elements with the class name as a parameter. Again, the search covers all sub-elements of the node on which the method is called.
 
-It's important to note that `NodeList` objects are *not* real JavaScript arrays. For example, you cannot use the `forEach()` method to iterate on a `NodeList`. To turn a `NodeList` object into an array, use the `Array.from()` method.
+It's important to note that `NodeList` objects are *not* real JavaScript arrays, so not all array operations are applicable to them. To turn a `NodeList` object into an array, use the `Array.from()` method.
 
 To select and display all document elements with a class `"wonders"`, you can write the following code.
 
@@ -107,7 +107,7 @@ existingElements.forEach(element => {
 
 ### Selecting an item according to its ID
 
-Lastly, each element of the DOM provides a method called `getElementById()` that returns among all sub-elements with the ID passed as a parameter. It returns `null` if no associated element can be found.
+Lastly, the `document` variable provides a method called `getElementById()` that returns the element with the specified ID among all elements of the document. It returns `null` if no associated element can be found.
 
 The following code selects and displays the list with ID `"new"`.
 
@@ -118,7 +118,7 @@ console.log(document.getElementById("new"));
 
 ![Execution result](images/chapter14-09.png)
 
-E> Beware: contrary to others, the `getElementById()` method does not contain any `'s'` after the `"Element"` word.
+E> Beware: contrary to others, the `getElementById()` method does not contain any `'s'` after the word `"Element"`.
 
 ### Selecting elements via CSS selectors
 
@@ -162,7 +162,7 @@ console.log(document.querySelector("p"));
 
 ### Choosing a selection method
 
-You just discovered several ways of selecting DOM elements. How to choose the right one?
+You just discovered several ways of selecting DOM elements. How do you choose the right one?
 
 Since they use CSS selectors, `querySelectorAll()` and `querySelector()` could cover all your needs, but they might perform [slower](https://jsperf.com/getelementsbyclassname-vs-queryselectorall/195) than the others.
 
@@ -182,7 +182,7 @@ The DOM also provides information on the items you've just selected.
 
 ### HTML content
 
-The `innerHTML` property will retrieve the HTML contents of your DOM element.
+The `innerHTML` property will retrieve the HTML content of your DOM element.
 
 ```js
 // The HTML content of the DOM element with ID "content"
@@ -313,7 +313,7 @@ Write a JavaScript program containing a `linkInfo()` function that shows:
 * The total number of links.
 * The target of the first and last links.
 
-This function shuld work even if no links are present.
+This function should work even if no links are present.
 
 ![Expected result](images/chapter14-03.png)
 
@@ -329,7 +329,7 @@ Add the following new instrument at the end of the HTML list, then check your pr
 
 ### Handling classes
 
-Improve the previous program to add a `has()` function that test if an element designated by its ID has a class. The function shows `true`, `false` or an error message if the element can't be found.
+Improve the previous program to add a `has()` function that tests if an element designated by its ID has a class. The function shows `true`, `false` or an error message if the element can't be found.
 
 ```js
 // Show if an element has a class

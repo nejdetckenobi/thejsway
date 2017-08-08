@@ -8,9 +8,9 @@ A lot of code you write will involve modifying chains of text characters - or [s
 
 * The `length` property returns the number of characters of the string.
 
-* JavaScript string are **[immutable]( https://en.wikipedia.org/wiki/Immutable_object )**: once created, a string value never changes. String methods never affect the initial value and always return a new string.
+* JavaScript strings are **[immutable]( https://en.wikipedia.org/wiki/Immutable_object )**: once created, a string value never changes. String methods never affect the initial value and always return a new string.
 
-* The `toLowerCase()` and `toUpperCase()` methods respectively convert strings to lower and upper case.
+* The `toLowerCase()` and `toUpperCase()` methods respectively return new converted strings to lower and upper case.
 
 * String values may be compared using the `===` operator, which is case sensitive.
 
@@ -67,7 +67,7 @@ console.log(uppercaseWord); // "BORA-BORA"
 
 `toLowerCase()` and `toUpperCase()` are two string methods. Like every string method, both have no affect on the initial value and return a new string.
 
-T> It's important to understand that once created, a string value never change: strings are **immutable** in JavaScript.
+T> It's important to understand that once created, a string value never changes: strings are **immutable** in JavaScript.
 
 ## Comparing two strings
 
@@ -79,7 +79,7 @@ console.log(word === "koala");    // true
 console.log(word === "kangaroo"); // false
 ```
 
-W> String comparison is case sensitive. Do pay attention to your lower and uppercase letters!
+W> String comparison is case sensitive. Do indeed pay attention to your lower and uppercase letters!
 
 ```js
 console.log("Qwerty" === "qwerty");               // false
@@ -123,7 +123,7 @@ console.log(name[4]); // "h"
 
 This is impractical if your string contains more than a few characters. You need a better solution to *repeat* access to characters. Does the word "repeat" bring to mind a former concept? Loops, of course!
 
-You may write a **loop** to access each character of a string. Generally speaking, a `for` loop is a better choice than a `while` loop, since we know here that the loop will need to run for each character in the string.
+You may write a **loop** to access each character of a string. Generally speaking, a `for` loop is a better choice than a `while` loop, since we know the loop needs to run once for each character in the string.
 
 ```js
 for (let i = 0; i < myString.length; i++) {
@@ -142,7 +142,7 @@ for (let i = 0; i < name.length; i++) {
 }
 ```
 
-A recent JavaScript evolution has introduced yet another option to iterate over a string: the `for-of` loop. The previous example may also be written:.
+As for arrays covered earlier, a recent JavaScript evolution has introduced yet another option to iterate over a string: the `for-of` loop. The previous example may also be written:.
 
 ```js
 const name = "Sarah";
@@ -169,7 +169,7 @@ nameArray.forEach(letter => {
 
 Looking for particular values inside a string is a common task.
 
-The `indexOf()` takes as a parameter the searched value. If that value is found inside the string, it returns the index of the first occurrence of the value. Otherwise, it returns -1.
+The `indexOf()` takes as a parameter the searched-for value. If that value is found inside the string, it returns the index of the first occurrence of the value. Otherwise, it returns -1.
 
 ```js
 const song = "Honky Tonk Women";
@@ -177,21 +177,23 @@ console.log(song.indexOf("onk")); // 1
 console.log(song.indexOf("Onk")); // -1 because of case mismatch
 ```
 
-When searching for a value at the beginning or end of a string, you may also use the `startsWith()` and `endsWith()` methods. Both return either `true` or `false`, depending on whether the value is found or not.
+When searching for a value at the beginning or end of a string, you may also use the `startsWith()` and `endsWith()` methods. Both return either `true` or `false`, depending on whether the value is found or not. Beware: these methods are case-sensitive.
 
 ```js
 const song = "Honky Tonk Women";
 
 console.log(song.startsWith("Honk")); // true
-console.log(song.startsWith("Tonk")); // false because of case sensitivity
+console.log(song.startsWith("honk")); // false
+console.log(song.startsWith("Tonk")); // false
 
 console.log(song.endsWith("men")); // true
-console.log(song.endsWith("Men")); // false because of case sensitivity
+console.log(song.endsWith("Men")); // false
+console.log(song.endsWith("Tonk")); // false
 ```
 
 ## Breaking a string into parts
 
-Sometimes a string is made of several parts separated by a particular value. In that case, it's easy to obtain the individual parts by using the `split()` method. It takes as a parameter the separator and returns an array containing the parts.
+Sometimes a string is made of several parts separated by a particular value. In that case, it's easy to obtain the individual parts by using the `split()` method. This method takes as a parameter the separator and returns an array containing the parts.
 
 ```js
 const monthList = "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec";
@@ -204,7 +206,7 @@ console.log(months[11]); // "Dec"
 
 ### Word info
 
-Write a program that asks you for a word then shows its length, lowercase and uppercase values.
+Write a program that asks you for a word then shows its length, lowercase, and uppercase values.
 
 ### Vowel count
 
@@ -216,6 +218,6 @@ Improve the previous program so that it shows the word written backwards.
 
 ### Palindrome
 
-Improve the previous program to check if the word is a palindrome. A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing. Punctuation and spacing may not be taken into account here.
+Improve the previous program to check if the word is a palindrome. A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing. 
 
 > `"radar"` should be detected as a palindrome, `"Radar"` too.

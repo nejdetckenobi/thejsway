@@ -8,7 +8,7 @@ This short chapter summarizes what you need to known about the Web and web pages
 
 * A **web page** is a document suitable for the Web. Creating web pages usually involves three technologies: [HTML](https://en.wikipedia.org/wiki/HTML) to structure the content, [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) to define its presentation and JavaScript to add interactivity.
 
-* An HTML document is made of text and structural elements called **tags** that describe the page content: paragraphs, headings, hyperlinks, images, etc.
+* An HTML document is made of text and structural elements called **tags** that describe the page content, such as: paragraphs, headings, hyperlinks, images, etc.
 
 * CSS uses **selectors** to declare which HTML elements a style applies to. Elements can be selected by tag name (`h1`), by class (`.done`) or by identifier (`#rude`).
 
@@ -135,7 +135,7 @@ A JavaScript file, usually stored in a `.js` file, is loaded by a web page with 
 
 To create interactive web pages, you need to write HTML, CSS and JavaScript code. If you're just starting out, the easiest way to do so is by using an online JavaScript playground. However, you will likely want to develop in a more professional fashion at some point, or need to work offline.
 
-Refer to the [appendix](#env-setup) for details on setting up your environment.
+Refer to the appendix for details on setting up your environment.
 
 ## Coding time!
 
